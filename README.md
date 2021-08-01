@@ -12,9 +12,9 @@ as usually done. As well-known, in English, the pronounce of a letter varies a l
 expect that the sequential learn of RNN can incorporate some orthographical characteristics of the English language.
 
 
-# About the Model
+## About the Model
 
-# Sample Results
+## Sample Results
 
 
 ## References
