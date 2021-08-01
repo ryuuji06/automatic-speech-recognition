@@ -8,15 +8,11 @@ The state-of-the-art of automatic speech recognition was held for a long time by
  - more recently, end-to-end convolutional models have been showing promising results for ASR, such as Wav2letter [6] and Jasper [7];
  - also recently, transformers (attention-based models) have also shown good results in speech recognition task, such as with Conformer [8].
 
-In this test, I use the RNN-CTC algorithm.
+## About this implementation
 
-One difficulty faced when implemented such systems is the vocabulary size to be recognized. To simplify this issue,
-the implemented system recognizes a sequence of characters (letters), rather than using words as recognition units,
-as usually done. As well-known, in English, the pronounce of a letter varies a lot, specially vowels. However, we
-expect that the sequential learn of RNN can incorporate some orthographical characteristics of the English language.
+In this test, I use the RNN-CTC algorithm. Inspired on [9]. Dataset Librispeech.
 
-
-## About the Model
+One difficulty faced when implemented such systems is the vocabulary size to be recognized. To simplify this issue, the implemented system recognizes a sequence of characters (letters), rather than using words as recognition units, as usually done. As well-known, in English, the pronounce of a letter varies a lot, specially vowels. However, we expect that the sequential learn of RNN can incorporate some orthographical characteristics of the English language.
 
 Only RNN layers.
 
