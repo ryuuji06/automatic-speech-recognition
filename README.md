@@ -16,6 +16,19 @@ expect that the sequential learn of RNN can incorporate some orthographical char
 
 ## Sample Results
 
+Target text:
+the music came nearer and he recalled the words the words of shelley's fragment upon the moon wandering companionless pale for weariness
+
+Greedy prediction
+te meusycame mearan he ro cal tho wirids the werds of shollys frit met to pon the mo laneer yng comepinilus pa fo wearing as
+
+Beam prediction
+te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wear ing as
+te meus y came mearan he rof cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wear ing as
+te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wearing as
+te meus y came mearan he rof cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wearing as
+te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wear ing as
+
 
 ## References
 
