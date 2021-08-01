@@ -1,8 +1,10 @@
 # Character-wise Automatic Speech Recognition
 
-In this test, I implemented a simple functional system that transcript the speech of a given audio signal, task known as automatic speech recognition (ASR). 
+In this test, I implemented a simple functional system that transcript the speech of a given audio signal, task known as automatic speech recognition (ASR). Instead of recognizing entire words, which would require a large output structure, or recognizing phonemes, which would require a training set with the transcripted phonemes (which is actually available, such as TIMIT), in this first scratch I opt to implement a simple character-wise speech recognition system.
 
-Traditionally solved with HMM. With deep neural networks, it has been solved with CTC (or RNN-transceiver),
+The state-of-the-art of automatic speech recognition was held for a long time by methods based on hidden Markov models (HMM) [1], often with some neural network-hybrid strategy. With the emergence of deep learning, recurrent neural networks (RNN) and convolutional neura networks (CNN) came to prevail in solving ASR. Just to highlight a few approaches that has arisen, there is the RNN-CTC algorithm [2] (and also its variant RNN-transceiver [3]); the encoder-decoder (or sequence-to-sequence) models, in which audio applications usually require the attention mechanism [4,5];
+
+With deep neural networks, it has been solved with CTC (or RNN-transceiver),
 encoder-decoder (with or without attention) and transformer. In this test, I used a RNN-CTC approach.
 
 
@@ -32,10 +34,35 @@ te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon t
 
 ## References
 
+[1] L.R. Bahl, F. Jelinek, and R.L. Mercer, "A maximum likelihood approach to continuous speech recognition". IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 5, pp. 179–190, 1983.
+
+[2] A. Graves, S. Fernandez, F. Gomez and J. Schmidhuber. "Connectionist temporal classification: labelling unsegmented sequence data with recurrent neural networks". Proceedings of the 23rd International Conference on Machine Learning (ICML'06), p.369-376, 2006
+
+[3] A. Graves, A. Mohamed, G. Hinton, "Speech recognition with deep recurrent neural networks". Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, 2013.
+
+[4] J. Chorowski, D. Bahdanau, K. Cho and Y. Bengio. "Attention-based models for speech recognition". Proceedings of the 28th International Conference on Neural Information Processing Systems (NIPS'15), p. 577-585, 2015.
+
+[5] W. Chan, N. Jaitly, Q. Le and O. Vinyals. "Listen, attend and spell: a neural network for large vocabulary conversational speech recognition". Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP'16), p. 4960-4964, 2016.
+
+[6] R. Collobert, C. Puhrsch and G. Synnaeve. "Wav2letter: and end-to-end ConvNet-based speech recognition system". Proceedings of the 5th International Conference on Learning Representations, 2017
+
+[7] J. Li, V. Lavrukhin, B. Ginsburg, et al. "Jasper: an end-to-end convolutional neural acoustic model". Proceedings of the Interspeech 2019, p. 71-75.
+
+[8]
 
 
-[1] A. Graves, S. Fernandez, F. Gomez and J. Schmidhuber. "Connectionist temporal classification: labelling
-unsegmented sequence data with recurrent neural networks". Proceedings of the 23rd International Conference on 
-Machine Learning (ICML'06), p.369-376, 2006
+=========================================================================
+W. HAN, Z. ZHANG, Y. ZHANG, J. YU, C. CHIU, J. QIN, ET AL (GOOGLE INC.)
+CONTEXTNET: IMPROVING CONVOLUTIONAL NEURAL NETWORKS FOR AUTOMATIC
+SPEECH RECOGNITION WITH GLOBAL CONTEXT
+2020 (?)
+=========================================================================
+
+
+=========================================================================
+A. GULATI, J. QIN, C. CHIU, W. HAN, ET AL (GOOGLE INC.)
+CONFORMER: CONVOLUTION-AUGMENTED TRANSFORMER FOR SPEECH RECOGNITION
+INTERSPEECH 2020
+=========================================================================
 
 [] https://github.com/lucko515/speech-recognition-neural-network
