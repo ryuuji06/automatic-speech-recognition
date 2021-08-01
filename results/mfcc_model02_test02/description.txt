@@ -1,0 +1,9 @@
+Testing recurrent layer with TimeDistributed Dense layer.
+LSTM layers, 2 layers with [64, 64] units in recurrent hidden layers.
+Batch size 32, batch normalization False, dropout False. SGD optimizer.
+
+30 epochs
+steady loss: ~160
+steady val loss: ~195
+
+time: 5h

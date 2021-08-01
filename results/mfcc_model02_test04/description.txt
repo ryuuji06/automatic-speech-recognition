@@ -1,0 +1,11 @@
+Testing recurrent layer with TimeDistributed Dense layer.
+LSTM layers, 2 layers with [128, 128] units in recurrent hidden layers.
+Batch size 32, batch normalization False, dropout False. SGD optimizer.
+
+Double learning rate to 0.04.
+
+30 epochs
+min loss: ~178 at epoch 18, then increases a little
+min val loss: ~204 at epoch 14, then oscilating from 202 to 225
+
+time: 7h15min

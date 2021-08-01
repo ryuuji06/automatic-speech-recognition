@@ -1,0 +1,10 @@
+Testing double recurrent layer with TimeDistributed Dense layer.
+LSTM layers, with standard parameters and number of units (128,128),
+no batch normalization, no dropout. SGD optimizer.
+
+
+30 epochs
+steady loss: ~110
+steady val loss: ~187
+
+time: 7h20min
