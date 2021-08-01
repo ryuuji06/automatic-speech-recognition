@@ -2,7 +2,11 @@
 
 In this test, I implemented a simple functional system that transcript the speech of a given audio signal, task known as automatic speech recognition (ASR). Instead of recognizing entire words, which would require a large output structure, or recognizing phonemes, which would require a training set with the transcripted phonemes (which is actually available, such as TIMIT), in this first scratch I opt to implement a simple character-wise speech recognition system.
 
-The state-of-the-art of automatic speech recognition was held for a long time by methods based on hidden Markov models (HMM) [1], often with some neural network-hybrid strategy. With the emergence of deep learning, recurrent neural networks (RNN) and convolutional neura networks (CNN) came to prevail in solving ASR. Just to highlight a few approaches that has arisen, there is the RNN-CTC algorithm [2] (and also its variant RNN-transceiver [3]); the encoder-decoder (or sequence-to-sequence) models, in which audio applications usually require the attention mechanism [4,5];
+The state-of-the-art of automatic speech recognition was held for a long time by methods based on hidden Markov models (HMM) [1], often with some neural network-hybrid strategy. With the emergence of deep learning, recurrent neural networks (RNN) and convolutional neura networks (CNN) came to prevail in solving ASR. Just to highlight a few approaches that has arisen,
+ - there is the RNN-CTC algorithm [2] (and also its variant RNN-transceiver [3]), that performs an alignment the input sequence and the target sequence when computing the loss;
+ - there is the encoder-decoder (or sequence-to-sequence) models, where an encoder processes the input sequence, and the decoder produces the output sequence from the encoder output; this model works better when encoder and decoder is intermediated by an attention mechanism [4,5];
+ - more recently, end-to-end convolutional models have been showing promising results for ASR, such as Wav2letter [6] and Jasper [7];
+ - also recently, transformers (attention-based models) have also shown good results in speech recognition task, such as with Conformer [8].
 
 With deep neural networks, it has been solved with CTC (or RNN-transceiver),
 encoder-decoder (with or without attention) and transformer. In this test, I used a RNN-CTC approach.
@@ -48,21 +52,6 @@ te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon t
 
 [7] J. Li, V. Lavrukhin, B. Ginsburg, et al. "Jasper: an end-to-end convolutional neural acoustic model". Proceedings of the Interspeech 2019, p. 71-75.
 
-[8]
+[8] A. Gulati, J. Qin, C. Chiu, W. Han, et al. "Conformer: convolution-augmented transformer for speech recognition". Proceedings of the Interspeech 2020.
 
-
-=========================================================================
-W. HAN, Z. ZHANG, Y. ZHANG, J. YU, C. CHIU, J. QIN, ET AL (GOOGLE INC.)
-CONTEXTNET: IMPROVING CONVOLUTIONAL NEURAL NETWORKS FOR AUTOMATIC
-SPEECH RECOGNITION WITH GLOBAL CONTEXT
-2020 (?)
-=========================================================================
-
-
-=========================================================================
-A. GULATI, J. QIN, C. CHIU, W. HAN, ET AL (GOOGLE INC.)
-CONFORMER: CONVOLUTION-AUGMENTED TRANSFORMER FOR SPEECH RECOGNITION
-INTERSPEECH 2020
-=========================================================================
-
-[] https://github.com/lucko515/speech-recognition-neural-network
+[9] https://github.com/lucko515/speech-recognition-neural-network
