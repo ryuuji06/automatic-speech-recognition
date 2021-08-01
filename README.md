@@ -1,6 +1,6 @@
 # Character-wise Automatic Speech Recognition
 
-In this test, I implemented a simple functional system that transcript the speech of a given audio signal, task known as automatic speech recognition (ASR). Instead of recognizing entire words, which would require a large output structure, or recognizing phonemes, which would require a training set with the transcripted phonemes (which is actually available, such as TIMIT), in this first scratch I opt to implement a simple character-wise speech recognition system.
+I implement a simple functional system that transcript the speech of a given audio signal, task known as automatic speech recognition (ASR). Instead of recognizing entire words, which would require a large output structure, or recognizing phonemes, which would require a training set with the transcripted phonemes (which is actually available, such as TIMIT), in this first scratch I opt to implement a simple character-wise speech recognition system.
 
 The state-of-the-art of automatic speech recognition was held for a long time by methods based on hidden Markov models (HMM) [1], often with some neural network-hybrid strategy. With the emergence of deep learning, recurrent neural networks (RNN) and convolutional neura networks (CNN) came to prevail in solving ASR. Just to highlight a few approaches that has arisen,
  - there is the RNN-CTC algorithm [2] (and also its variant RNN-transceiver [3]), that performs an alignment the input sequence and the target sequence when computing the loss;
@@ -8,9 +8,7 @@ The state-of-the-art of automatic speech recognition was held for a long time by
  - more recently, end-to-end convolutional models have been showing promising results for ASR, such as Wav2letter [6] and Jasper [7];
  - also recently, transformers (attention-based models) have also shown good results in speech recognition task, such as with Conformer [8].
 
-With deep neural networks, it has been solved with CTC (or RNN-transceiver),
-encoder-decoder (with or without attention) and transformer. In this test, I used a RNN-CTC approach.
-
+In this test, I use the RNN-CTC algorithm.
 
 One difficulty faced when implemented such systems is the vocabulary size to be recognized. To simplify this issue,
 the implemented system recognizes a sequence of characters (letters), rather than using words as recognition units,
@@ -20,7 +18,13 @@ expect that the sequential learn of RNN can incorporate some orthographical char
 
 ## About the Model
 
+Only RNN layers.
+
 ## Sample Results
+
+The training loss along the training process is shown below. Note that the validation loss gets stuck while the training loss keeps on reducing. Why?
+
+<img src="https://github.com/ryuuji06/automatic-speech-recognition/blob/main/images/ex_hist.png" width="400">
 
 Target text:
 the music came nearer and he recalled the words the words of shelley's fragment upon the moon wandering companionless pale for weariness
