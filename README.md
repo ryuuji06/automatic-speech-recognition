@@ -29,9 +29,13 @@ As a greedy estimate (taking always the highest outputs at each time instant), I
 This prediction is far from good, as expected from the high loss value, however the predicted letter sequence resembles somehow the original sentence. Also testing some beam search predictions, I obtain
 
 `te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wear ing as`
+
 `te meus y came mearan he rof cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wear ing as`
+
 `te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wearing as`
+
 `te meus y came mearan he rof cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wearing as`
+
 `te meus y came mearan he ro cal tho wirids the werds of sholys frit met to pon the mon laner yng come pini lus pal fo wear ing as`
 
 
